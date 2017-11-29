@@ -13,4 +13,7 @@ RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add
   && rm /etc/apt/sources.list.d/google-chrome.list \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
+ENV NODE_PATH /usr/local/bin/node
+ENV CHROME_PATH /usr/bin/google-chrome
+
 CMD [ "bash" ]
